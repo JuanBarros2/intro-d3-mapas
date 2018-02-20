@@ -4,8 +4,9 @@
 # EXP_ESCALA='z = d3.scaleSequential(d3.interpolateViridis).domain([0, 100]),
 #             d.features.forEach(f => f.properties.fill = z(f.properties["Percentual Aprendizado Adequado (%)"])),
 #             d'
-EXP_ESCALA='z = d3.scaleThreshold().domain([10, 25, 50, 75, 100]).range(d3.schemeOrRd[4]),
-            d.features.forEach(f => f.properties.fill = z(f.properties["Percentual Aprendizado Adequado (%)"])),
+export PATH=$PATH:'node_modules/.bin/'
+EXP_ESCALA='z = d3.scaleThreshold().domain([-20, -10, 0, 10, 20, 30]).range(d3.schemeBrBG[5]),
+            d.features.forEach(f => f.properties.fill = z(f.properties["Crescimento entre 2011 e 2013 (pp*)"])),
             d'
 
 ndjson-map -r d3 -r d3=d3-scale-chromatic \

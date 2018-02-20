@@ -5,6 +5,7 @@
 # OBTER E TRANSFORMAR OS DADOS ======================
 # Baixa e descompacta
 # curl 'ftp://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2016/UFs/PB/pb_municipios.zip' -o pb_municipios.zip
+export PATH=$PATH:'node_modules/.bin'
 unzip pb_municipios.zip
 
 # Cria geometria projetada
